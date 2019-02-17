@@ -4,15 +4,14 @@
 
 所有的步骤都假设你已经安装了git和npm
 
-首先创建getc目录，并将项目克隆下来
+首先将项目克隆下来
 ```shell
-mkdir getc
-cd getc
-git clone https://github.com/sevenddddddd/getc.git
+git clone https://github.com/sevenddddddd/sdu-getc.git
 ```
 
-然后全局安装
+然后进入目录，并全局安装
 ```shell
+cd sdu-getc
 npm install . -g
 ```
 
@@ -28,7 +27,7 @@ getc -u <你的学号> -p <你的教务密码>
 输出示例
 ![screenshot](./screenshot.png)
 
-可选参数
+参数
 
 * ```-u xxx``` 
   
