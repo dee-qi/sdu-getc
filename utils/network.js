@@ -11,15 +11,12 @@ module.exports = {
         }, function(err, resp, body) {
             if(resp.headers['set-cookie']) {
                 var sessionid = resp.headers['set-cookie'];
-                // loog.log('SESSIONID', sessionid);
                 callback(null, sessionid);
             }
         })
     },
     // j_password是密码的md5值
     login(sessionid, j_username, j_password, callback) {
-        // loog.log('u', j_username);
-        // loog.log('p', md5(''+j_password))
         request({
             url: 'http://bkjwt.sdu.edu.cn/b/ajaxLogin',
             method: 'POST',
@@ -54,7 +51,6 @@ module.exports = {
             if(err) {
                 callback(err);
             } else {
-                // loog.log('cBody', body);
                 let $ = cheerio.load(body);
                 let trs = $('#ysjddDataTableId').children('tbody').children('tr');
                 let decodedData = [];
@@ -71,7 +67,6 @@ module.exports = {
                             row.push($(this).text());
                     })
                     decodedData.push(row);
-                    // console.log(decodedData);
                 });
                 callback(null, decodedData);
             }

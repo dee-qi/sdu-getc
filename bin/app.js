@@ -6,7 +6,7 @@ const WordTable = require('../utils/table-printer');
 let app = {
     sessionID: undefined,
     username: 201600301190,
-    password: 112233,
+    password: 000000, //这不是我的密码，放弃吧
     u_modified: false,
     p_modified: false,
     flag: {
@@ -16,7 +16,7 @@ let app = {
     reset() {
         this.sessionID = undefined;
         this.username = '201600301190';
-        this.password = '112233';
+        this.password = '000000';
         this.u_modified = false;
         this.p_modified = false;
     },
